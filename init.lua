@@ -35,3 +35,7 @@ require "nvchad.autocmds"
 vim.schedule(function()
   require "mappings"
 end)
+
+require("oil").setup({
+  default_file_explorer = true
+})
