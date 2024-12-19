@@ -4,7 +4,7 @@ require("nvchad.configs.lspconfig").defaults()
 local lspconfig = require "lspconfig"
 
 -- EXAMPLE
-local servers = { "html", "cssls","pyright","gopls","r_language_server" }
+local servers = { "html", "cssls","pyright","gopls","r_language_server","ruff" }
 local nvlsp = require "nvchad.configs.lspconfig"
 
 -- lsps with default config
@@ -38,6 +38,13 @@ lspconfig.pyright.setup {
       },
     },
   },
+}
+-- Ruff configuration for Python files
+lspconfig.ruff.setup {
+  on_attach = nvlsp.on_attach,
+  on_init = nvlsp.on_init,
+  capabilities = nvlsp.capabilities,
+  filetypes = { "python" },
 }
 
 -- R Language Server configuration for R files
