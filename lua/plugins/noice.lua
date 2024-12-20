@@ -45,10 +45,10 @@ return {
       vim.cmd([[messages clear]])
     end
 
-    -- Set custom highlight groups for better visibility
-    vim.cmd("highlight NoiceInfo guifg=#00ff00 guibg=#000000")  -- Bright green on black for info messages
-    vim.cmd("highlight NoiceWarning guifg=#ffff00 guibg=#000000") -- Bright yellow on black for warnings
-    vim.cmd("highlight NoiceError guifg=#ff0000 guibg=#ffffff")   -- Bright red on white for errors
+    -- -- Set custom highlight groups for better visibility
+    -- vim.cmd("highlight NoiceInfo guifg=#00ff00 guibg=#000000")  -- Bright green on black for info messages
+    -- vim.cmd("highlight NoiceWarning guifg=#ffff00 guibg=#000000") -- Bright yellow on black for warnings
+    -- vim.cmd("highlight NoiceError guifg=#ff0000 guibg=#ffffff")   -- Bright red on white for errors
         
     require("noice").setup(opts)
   end,

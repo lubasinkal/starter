@@ -12,6 +12,9 @@ M.base46 = {
 	-- 	Comment = { italic = true },
 	-- 	["@comment"] = { italic = true },
 	-- },
+
 }
+
+M.ui = require("custom.chadrc")
 
 return M
