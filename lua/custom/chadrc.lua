@@ -37,8 +37,8 @@ M.base46 = {
 	  { txt = "󰈭  Find Word", keys = "fw", cmd = "Telescope live_grep" },
 	  { txt = "󱥚  Themes", keys = "th", cmd = ":lua require('nvchad.themes').open()" },
 	  { txt = "  Mappings", keys = "ch", cmd = "NvCheatsheet" },
-	  { txt = "  Config", keys = "c", cmd = ":e $MYVIMRC" },  -- Added button to open config folder
-	
+	  { txt = "  Config file", keys = "c", cmd = ":e $MYVIMRC" },  -- Added button to open config folder
+	  { txt = "  Config folder", keys = "cf", cmd = ":cd $LOCALAPPDATA\\nvim | e init.lua" },
 	  { txt = "─", hl = "NvDashFooter", no_gap = true, rep = true },
 	
 	  {

@@ -1,6 +1,15 @@
 -- Set up base46 cache path and leader key
 vim.g.base46_cache = vim.fn.stdpath("data") .. "/base46/"
 vim.g.mapleader = " "
+-- Set the font for Neovide
+if vim.g.neovide then
+  vim.opt.guifont = "JetBrainsMono Nerd Font:h14"
+  -- Optional: Additional settings
+  vim.g.neovide_antialiasing = true  -- Enable anti-aliasing
+  vim.g.neovide_render_scale = 1.0   -- Font render scale
+  vim.g.neovide_clipboard = true
+  vim.opt.clipboard = 'unnamedplus'
+end
 
 -- Bootstrap Lazy.nvim
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
