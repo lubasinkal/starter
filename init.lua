@@ -10,6 +10,11 @@ if vim.g.neovide then
   vim.g.neovide_clipboard = true
   vim.opt.clipboard = 'unnamedplus'
 end
+-- Set the font for Neovide
+if vim.g.nvy then
+  vim.opt.guifont = "JetBrainsMono Nerd Font:h14"
+ end
+
 
 -- Bootstrap Lazy.nvim
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
