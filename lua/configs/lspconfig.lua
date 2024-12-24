@@ -33,8 +33,11 @@ lspconfig.pyright.setup {
   settings = {
     python = {
       analysis = {
-        typeCheckingMode = "basic",  -- Options: off, basic, strict
-        autoImportCompletions = true,
+        typeCheckingMode = "strict",  -- Enforces strict type checking for variables and objects
+        autoSearchPaths = true,       -- Automatically finds dependencies in your workspace
+        useLibraryCodeForTypes = true, -- Uses library-provided type hints for better analysis
+        diagnosticMode = "workspace", -- Analyze all files in the workspace
+        autoImportCompletions = true, -- Suggest imports based on variables used
       },
     },
   },
@@ -45,6 +48,16 @@ lspconfig.ruff.setup {
   on_init = nvlsp.on_init,
   capabilities = nvlsp.capabilities,
   filetypes = { "python" },
+  settings = {
+    ruff = {
+      linting = {
+        enabled = true,
+      },
+      completion = {
+        enabled = true,
+      },
+    },
+  },
 }
 
 -- R Language Server configuration for R files
