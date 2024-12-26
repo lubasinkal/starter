@@ -25,8 +25,8 @@ return {
       -- Install these LSPs automatically
       ensure_installed = {
         -- 'bashls', -- requires npm to be installed
-        -- 'cssls', -- requires npm to be installed
-        -- 'html', -- requires npm to be installed
+        'cssls', -- requires npm to be installed
+        'html', -- requires npm to be installed
         "pyright",
         "gopls",
         "r_language_server",
