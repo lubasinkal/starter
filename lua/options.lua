@@ -6,7 +6,7 @@ local o = vim.o
 o.cursorlineopt ='both' -- to enable cursorline!
 
 -- Set default shell
-local pwsh = "C:\\Program Files\\WindowsApps\\Microsoft.PowerShell_7.4.6.0_x64__8wekyb3d8bbwe\\pwsh.exe"
+local pwsh = "C:\\Program Files\\PowerShell\\7\\pwsh.exe"
 
 -- Fallback to PowerShell if pwsh is empty
 if pwsh == "" then
@@ -15,4 +15,4 @@ end
 
 -- Configure shell options
 vim.opt.shell = pwsh
-vim.opt.shellcmdflag = "-NoLogo -NoProfile -ExecutionPolicy RemoteSigned -Command -"
+vim.opt.shellcmdflag = "-NoLogo -NoProfileLoadTime -NoProfile -Command"
